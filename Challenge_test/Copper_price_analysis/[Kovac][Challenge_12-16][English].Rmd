@@ -92,7 +92,7 @@ NG_Luisiana <- ts(data = NG_Luisiana, start = c(1990, 12), frequency = 12)
 
 ## Introduction 
 
-The goal of this work is to analyze the price of the copper of natural gas on the global markets from 2012 until now. Further, I present the model of forecasting the prices for the next year. The work is the part of the project under [challengest][1] and the [protherm][2] company. 
+The goal of this work is to analyze the price of the copper and natural gas on the global markets from 2012 until now. Further, I present the model of forecasting the prices for the next year. The work is the part of the project under [challengest][1] and the [protherm][2] company. 
 
 The data was downloaded from following source:
 
@@ -156,7 +156,7 @@ plot.ts(copper_2012_ts, main = 'The price of the copper on LME ($ / kg)',
         sub = list('The price of copper between 2012 - 2016 (oct)', font = 2))
 ```
 
-We can see obvious trend with slightly fluctuations. The significant decreases of the price come in the begining of the current year. In 2014 after slightly increase of the price comes rapid fall of the price. In 2016 are the prices approximatly stable. 
+We can see obvious trend with slightly fluctuations. The significant decreases of the price come in the begining of the particular year. In 2014 after slightly increase of the price comes rapid fall of the price. In 2016 are the prices approximatly stable. 
 
 We can consider a seasonal component regarding the repeatition of the procesess of decline. I assume that this time series can be described as additive model.
 
@@ -244,7 +244,7 @@ plot.forecast(copper_forecast, main = 'The forecast of the cost of copper for 20
 
 I used standard control of the residuals for the check wheter the predictive model could be improved. 
 
-Firstly, I checked the correlation of the residuals with time lag. The good model should demonstrate the zero correlation of the residuals with consider the their time lagged values (the residuals in time $t$ should demonstrate zero-correlation with the residuals in time $t - l$ where $l$ is the time lag constant).
+Firstly, I checked the correlation of the residuals with time lag. The good model should demonstrate the zero correlation of the residuals with considering their time lagged values (the residuals in time $t$ should demonstrate zero-correlation with the residuals in time $t - l$ where $l$ is the time lag constant).
 
 ```{r Model checking 1}
 ## Check autocorrelations at lags up to 20, create correlogram
@@ -283,7 +283,7 @@ After all we can summarisze that our model estimates the current data well.
 
 ## Conclusion
 
-I summarized in this work the development of the copper's price from 2012 until october 2016. Further, I presented the prediction of the price of copper for 2017. In summary, the price of copper shows continual decrease from 2012 while in 2016 was the price stabilized. My model estimates further decline in the price in 2017. It is important to note that the current model may not be the right one. I do not rule that the different model can describe the data even better. 
+In this work I summarized  the development of the copper's price from 2012 until october 2016. Further, I presented the prediction of the price of copper for 2017. In summary, the price of copper shows continual decrease from 2012 while in 2016 was the price stabilized. My model estimates further decline in the price in 2017. It is important to note that the current model may not be the right one. I do not rule that the different model can describe the data even better. 
 
 #### Reference
 
